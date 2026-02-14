@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applive – Master Your Time</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #4e73df, #1cc88a);
+        color: #fff;
+        text-align: center;
+    }
+
+    header {
+        padding: 80px 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        background: #fff;
+        color: #4e73df;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #f8f9fc;
+        transform: scale(1.05);
+    }
+
+    section {
+        padding: 60px 20px;
+        background: #fff;
+        color: #333;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .feature-box {
+        background: #f8f9fc;
+        padding: 30px;
+        border-radius: 15px;
+        width: 280px;
+        transition: 0.3s ease;
+    }
+
+    .feature-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    footer {
+        padding: 30px;
+        background: #2e59d9;
+        color: #fff;
+    }
+
+    .counter {
+        font-size: 2rem;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Applive</h1>
+    <p>Take control of your day. Applive helps you organize tasks, track time, and boost productivity effortlessly.</p>
+    <button class="btn" onclick="scrollToFeatures()">Get Started</button>
+</header>
+
+<section id="features">
+    <h2>Why Choose Applive?</h2>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>Smart Scheduling</h3>
+            <p>Automatically organize your tasks based on priority and deadlines.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Real-Time Tracking</h3>
+            <p>Monitor how you spend your time and improve efficiency daily.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Goal Analytics</h3>
+            <p>Visual insights help you stay focused and achieve your goals faster.</p>
+        </div>
+    </div>
+
+    <div style="margin-top:50px;">
+        <h3>Users Boosted Productivity</h3>
+        <div class="counter" id="counter">0%</div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Applive. All rights reserved.</p>
+</footer>
+
+<script>
+    function scrollToFeatures() {
+        document.getElementById("features").scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Animated Counter
+    let count = 0;
+    const counter = document.getElementById("counter");
+    const interval = setInterval(() => {
+        if (count >= 85) {
+            clearInterval(interval);
+        } else {
+            count++;
+            counter.textContent = count + "%";
+        }
+    }, 30);
+</script>
+
+</body>
+</html>
